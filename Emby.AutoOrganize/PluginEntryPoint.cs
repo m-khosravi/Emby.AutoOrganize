@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Threading;
-using Emby.AutoOrganize.Core;
-using Emby.AutoOrganize.Data;
-using Emby.AutoOrganize.Model;
+using Emby.AutoOrganizeMD.Core;
+using Emby.AutoOrganizeMD.Data;
+using Emby.AutoOrganizeMD.Model;
 using MediaBrowser.Controller.Configuration;
 using MediaBrowser.Controller.Library;
 using MediaBrowser.Controller.Plugins;
@@ -14,7 +14,7 @@ using MediaBrowser.Model.Logging;
 using MediaBrowser.Model.Serialization;
 using MediaBrowser.Model.Tasks;
 
-namespace Emby.AutoOrganize
+namespace Emby.AutoOrganizeMD
 {
     public class PluginEntryPoint : IServerEntryPoint
     {

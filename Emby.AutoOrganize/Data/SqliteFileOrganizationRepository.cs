@@ -5,7 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Emby.AutoOrganize.Model;
+using Emby.AutoOrganizeMD.Model;
 using MediaBrowser.Controller;
 using MediaBrowser.Controller.Persistence;
 using MediaBrowser.Model.Logging;
@@ -13,7 +13,7 @@ using MediaBrowser.Model.Querying;
 using MediaBrowser.Model.Serialization;
 using SQLitePCL.pretty;
 
-namespace Emby.AutoOrganize.Data
+namespace Emby.AutoOrganizeMD.Data
 {
     public class SqliteFileOrganizationRepository : BaseSqliteRepository, IFileOrganizationRepository, IDisposable
     {

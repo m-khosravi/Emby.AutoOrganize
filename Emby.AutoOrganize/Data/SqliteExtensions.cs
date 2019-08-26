@@ -7,7 +7,7 @@ using SQLitePCL.pretty;
 using System.IO;
 using System.Text;
 
-namespace Emby.AutoOrganize.Data
+namespace Emby.AutoOrganizeMD.Data
 {
     public static class SqliteExtensions
     {

@@ -1,6 +1,6 @@
 ﻿using MediaBrowser.Model.Plugins;
 
-namespace Emby.AutoOrganize.Configuration
+namespace Emby.AutoOrganizeMD.Configuration
 {
     public class PluginConfiguration : BasePluginConfiguration
     {

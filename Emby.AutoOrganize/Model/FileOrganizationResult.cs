@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Emby.AutoOrganize.Model
+namespace Emby.AutoOrganizeMD.Model
 {
     public class FileOrganizationResult
     {

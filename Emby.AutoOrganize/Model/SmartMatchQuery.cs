@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Emby.AutoOrganize.Model
+namespace Emby.AutoOrganizeMD.Model
 {
     public class SmartMatchQuery
     {

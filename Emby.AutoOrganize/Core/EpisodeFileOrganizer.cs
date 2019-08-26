@@ -12,7 +12,7 @@ using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Emby.AutoOrganize.Model;
+using Emby.AutoOrganizeMD.Model;
 using MediaBrowser.Controller.Dto;
 using MediaBrowser.Controller.Entities;
 using MediaBrowser.Model.IO;
@@ -21,7 +21,7 @@ using Emby.Naming.TV;
 using MediaBrowser.Model.Providers;
 using EpisodeInfo = MediaBrowser.Controller.Providers.EpisodeInfo;
 
-namespace Emby.AutoOrganize.Core
+namespace Emby.AutoOrganizeMD.Core
 {
     public class EpisodeFileOrganizer
     {
@@ -236,7 +236,7 @@ namespace Emby.AutoOrganize.Core
                 {
                     SearchInfo = seriesInfo
 
-                }, targetFolder, cancellationToken);
+                }, cancellationToken);
 
                 var finalResult = searchResultsTask.FirstOrDefault();
 
@@ -422,6 +422,7 @@ namespace Emby.AutoOrganize.Core
             if (string.IsNullOrEmpty(episode.Path))
             {
                 SetEpisodeFileName(sourcePath, series.Name, season, episode, options);
+                
             }
 
             OrganizeEpisode(sourcePath,
@@ -925,7 +926,7 @@ namespace Emby.AutoOrganize.Core
             {
                 SearchInfo = episodeInfo
 
-            }, series, cancellationToken).ConfigureAwait(false);
+            }, cancellationToken).ConfigureAwait(false);
 
             var episodeSearch = searchResults.FirstOrDefault();
 
@@ -1053,9 +1054,15 @@ namespace Emby.AutoOrganize.Core
                     .Replace("%#2", episodeTitle.Replace(" ", "."))
                     .Replace("%#3", episodeTitle.Replace(" ", "_"));
             }
-
-            // Finally, call GetValidFilename again in case user customized the episode expression with any invalid filename characters
-            episode.Path = Path.Combine(season.Path, _fileSystem.GetValidFilename(result).Trim());
+            if (options.MoveEachEpisodeToAFolder)
+            {
+                episode.Path = Path.Combine(season.Path, $"E{episodeNumber.ToString("00", _usCulture)}", _fileSystem.GetValidFilename(result).Trim());
+            }
+            else
+            {
+                // Finally, call GetValidFilename again in case user customized the episode expression with any invalid filename characters
+                episode.Path = Path.Combine(season.Path, _fileSystem.GetValidFilename(result).Trim());
+            }
         }
 
         private bool IsSameEpisode(string sourcePath, string newPath)

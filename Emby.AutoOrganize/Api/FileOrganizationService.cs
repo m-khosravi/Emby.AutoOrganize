@@ -1,14 +1,14 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using Emby.AutoOrganize.Core;
-using Emby.AutoOrganize.Model;
+using Emby.AutoOrganizeMD.Core;
+using Emby.AutoOrganizeMD.Model;
 using MediaBrowser.Controller.Net;
 using MediaBrowser.Model.Dto;
 using MediaBrowser.Model.Querying;
 using MediaBrowser.Model.Serialization;
 using MediaBrowser.Model.Services;
 
-namespace Emby.AutoOrganize.Api
+namespace Emby.AutoOrganizeMD.Api
 {
     [Route("/Library/FileOrganization", "GET", Summary = "Gets file organization results")]
     public class GetFileOrganizationActivity : IReturn<QueryResult<FileOrganizationResult>>

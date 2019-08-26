@@ -3,9 +3,9 @@ using MediaBrowser.Model.Querying;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using Emby.AutoOrganize.Model;
+using Emby.AutoOrganizeMD.Model;
 
-namespace Emby.AutoOrganize.Core
+namespace Emby.AutoOrganizeMD.Core
 {
     public interface IFileOrganizationService
     {

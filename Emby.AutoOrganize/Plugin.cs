@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Emby.AutoOrganize.Configuration;
+using Emby.AutoOrganizeMD.Configuration;
 using MediaBrowser.Common.Configuration;
 using MediaBrowser.Common.Plugins;
 using MediaBrowser.Model.Plugins;
@@ -8,7 +8,7 @@ using MediaBrowser.Model.Serialization;
 using System.IO;
 using MediaBrowser.Model.Drawing;
 
-namespace Emby.AutoOrganize
+namespace Emby.AutoOrganizeMD
 {
     public class Plugin : BasePlugin<PluginConfiguration>, IHasWebPages, IHasThumbImage
     {
@@ -17,15 +17,15 @@ namespace Emby.AutoOrganize
         {
         }
 
-        public override string Name => "Auto Organize";
+        public override string Name => "Auto Organize EP edition";
 
 
         public override string Description
-            => "Automatically organize new media";
+            => "Automatically organize new media EP edition";
 
         public PluginConfiguration PluginConfiguration => Configuration;
 
-        private Guid _id = new Guid("14f5f69e-4c8d-491b-8917-8e90e8317530");
+        private Guid _id = new Guid("2FE6E99B-D07D-4AE6-B976-5B4F455DFD3A");
         public override Guid Id
         {
             get { return _id; }

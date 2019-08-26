@@ -4,14 +4,14 @@ using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Emby.AutoOrganize.Model;
+using Emby.AutoOrganizeMD.Model;
 using MediaBrowser.Controller.Configuration;
 using MediaBrowser.Controller.Library;
 using MediaBrowser.Controller.Providers;
 using MediaBrowser.Model.IO;
 using MediaBrowser.Model.Logging;
 
-namespace Emby.AutoOrganize.Core
+namespace Emby.AutoOrganizeMD.Core
 {
     public class MovieFolderOrganizer
     {

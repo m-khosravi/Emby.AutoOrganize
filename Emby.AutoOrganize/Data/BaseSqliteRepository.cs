@@ -9,7 +9,7 @@ using System.Linq;
 using SQLitePCL;
 using System.Text;
 
-namespace Emby.AutoOrganize.Data
+namespace Emby.AutoOrganizeMD.Data
 {
     public abstract class BaseSqliteRepository : IDisposable
     {

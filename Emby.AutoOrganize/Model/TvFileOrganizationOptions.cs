@@ -1,5 +1,5 @@
 ﻿
-namespace Emby.AutoOrganize.Model
+namespace Emby.AutoOrganizeMD.Model
 {
     public class TvFileOrganizationOptions
     {
@@ -16,6 +16,7 @@ namespace Emby.AutoOrganize.Model
         public string MultiEpisodeNamePattern { get; set; }
 
         public bool OverwriteExistingEpisodes { get; set; }
+        public bool MoveEachEpisodeToAFolder { get; set; }
 
         public bool DeleteEmptyFolders { get; set; }
 
@@ -42,6 +43,8 @@ namespace Emby.AutoOrganize.Model
             SeasonFolderPattern = "Season %s";
             SeasonZeroFolderName = "Season 0";
             SeriesFolderPattern = "%fn";
+
+            MoveEachEpisodeToAFolder = true;
 
             CopyOriginalFile = false;
 

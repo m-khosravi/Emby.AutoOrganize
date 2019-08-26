@@ -9,7 +9,7 @@ using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Emby.AutoOrganize.Model;
+using Emby.AutoOrganizeMD.Model;
 using MediaBrowser.Controller.Dto;
 using MediaBrowser.Controller.Entities;
 using MediaBrowser.Model.IO;
@@ -17,7 +17,7 @@ using MediaBrowser.Controller.Entities.Movies;
 using MediaBrowser.Model.Providers;
 using MediaBrowser.Model.Entities;
 
-namespace Emby.AutoOrganize.Core
+namespace Emby.AutoOrganizeMD.Core
 {
     public class MovieFileOrganizer
     {
@@ -429,7 +429,7 @@ namespace Emby.AutoOrganize.Core
                 {
                     SearchInfo = movieInfo
 
-                }, targetFolder, cancellationToken);
+                }, cancellationToken);
 
                 var finalResult = searchResultsTask.FirstOrDefault();
 

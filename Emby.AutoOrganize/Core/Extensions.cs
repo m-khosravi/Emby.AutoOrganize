@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
-using Emby.AutoOrganize.Model;
+using Emby.AutoOrganizeMD.Model;
 using MediaBrowser.Common.Configuration;
 
-namespace Emby.AutoOrganize.Core
+namespace Emby.AutoOrganizeMD.Core
 {
     public static class ConfigurationExtension
     {
